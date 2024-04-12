@@ -71,19 +71,28 @@ body{
     margin: 2px;
 }
 
+
+
 .table {
-    margin-top: 30px;
-}
+    width: 100%;
+    border-collapse: collapse;
 
-.table th,
+}
 .table td {
-    vertical-align: middle;
+    border: 1px solid #c8e8da;
+    padding: 8px;
+}
+.table-info th {
+    background-color: #ceeee0;
+    color: #333;
+    font-weight: bold;
+}
+ .table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.table-info th,
-.table-info td {
-    background-color: #17a2b8;
-    color: white;
+.table tr:hover {
+    background-color: #f2f2f2;
 }
 
 
@@ -93,4 +102,68 @@ body{
         top: 0;
         margin-bottom: 10px;
     }
+}
+
+.btn-primary {
+    border-color: #007bff; /* Blue */
+}
+
+.btn-danger {
+    border-color: #dc3545; /* Red */
+}
+
+.btn-secondary {
+    border-color: #6c757d; /* Gray */
+}
+
+.btn-success {
+    border-color: #28a745; /* Green */
+}
+
+.btn-warning {
+    border-color: #ffc107; /* Yellow */
+}
+
+.btn:active {
+    box-shadow: none; /* Remove the default box-shadow */
+}
+
+.btn-primary:active {
+    border-color: #0056b3; /* Darker blue */
+}
+
+.btn-danger:active {
+    border-color: #bd2130; /* Darker red */
+}
+
+.btn-secondary:active {
+    border-color: #545b62; /* Darker gray */
+}
+
+.btn-success:active {
+    border-color: #218838; /* Darker green */
+}
+
+.btn-warning:active {
+    border-color: #d39e00; /* Darker yellow */
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--primary);
+    padding: 10px 20px; /* Adjust padding */
+    height: 80px; /* Adjust height */
+}
+
+.navbar-brand img {
+    width: 150px; /* Adjust logo size */
+    height: 150px; /* Adjust logo size */
+}
+
+.navbar-nav .nav-link {
+    color: var(--font-color);
+    padding: 10px; /* Adjust padding */
+    margin-right: 10px; /* Adjust spacing between links */
 }

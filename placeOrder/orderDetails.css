@@ -1,0 +1,113 @@
+body{
+    background:linear-gradient(45deg, #d4dfe8, #c5e3d5) ;
+}
+.order_container{
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.2);
+}
+
+.order_container .container .row .col div{
+    margin: 15px;
+}
+
+.order_container .container h4{
+    color: var(--font-color);
+}
+
+.cart_btn{
+    background: var(--accent-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.cart_remove{
+    background: #ef233c;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 3px 15px 3px 15px;
+}
+
+.cart_remove:hover{
+    opacity: 0.7;
+}
+
+.order_btn{
+    background: var(--primary);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+}
+
+@media all and (max-width: 992px) {
+    .chart-card div{
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    section{
+        height: 150vh;
+    }
+
+    .chart-card div{
+        width: 450px;
+    }
+
+    .image-class{
+        display: none;
+    }
+
+    .active-page:after{
+        width: 0;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .chart-card{
+        display: none;
+    }
+}
+.header{
+    color: var(--font-color);
+    margin-top: 100px;
+}
+
+th[scope = 'col']{
+    background: var(--accent-color);
+    color: #ffffff;
+    text-align: center;
+}
+
+th[scope = 'col']:first-child{
+    border-radius: 15px 0 0 15px;
+}
+
+th[scope = 'col']:last-child{
+    border-radius: 0 15px 15px 0;
+}.navbar {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 1000;
+     background-color: var(--primary);
+     padding: 10px 20px; /* Adjust padding */
+     height: 80px; /* Adjust height */
+ }
+
+.navbar-brand img {
+    width: 150px; /* Adjust logo size */
+    height: 150px; /* Adjust logo size */
+}
+
+.navbar-nav .nav-link {
+    color: var(--font-color);
+    padding: 10px; /* Adjust padding */
+    margin-right: 10px; /* Adjust spacing between links */
+}

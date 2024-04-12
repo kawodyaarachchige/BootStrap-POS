@@ -12,7 +12,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="../assets/images/posware_logo.png" alt="Bootstrap" width="150" height="24">
+            <img src="../assets/icons/logoo.png" alt="Bootstrap" width="60" height="60">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -28,6 +28,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../placeOrder/order.html">Orders</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="order_details_nav" href="../placeOrder/orderDetails.html">Orders Details</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -38,9 +41,6 @@
         <h2>Item Manage</h2>
     </div>
     <div class="card mainDiv">
-        <div class="card-header">
-            Main / Item Manage
-        </div>
         <div class="card-body management-card">
 
             <!-- Search Item div-->
@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <!--Buttons for Item add and view-->
+
             <div id="crudBtn">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"  data-bs-target="#update-item-modal">Update</button>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal"  data-bs-target="#delete-item-modal">Delete</button>
@@ -73,6 +73,7 @@
                 <button type="button" class="btn btn-success" data-bs-toggle="modal"  data-bs-target="#save-item-modal">New Item</button>
                 <button type="button" class="btn btn-warning">View All Items</button>
             </div>
+
             <!-- Table-->
             <table class="table table-bordered table-hover">
                 <thead>

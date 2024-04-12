@@ -12,7 +12,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="../assets/images/posware_logo.png" alt="Bootstrap" width="150" height="24">
+            <img src="../assets/icons/logoo.png" alt="Bootstrap" width="60" height="60">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -28,6 +28,9 @@
                 <li class="nav-item">
                     <a class="nav-link  active" href="#">Orders</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="order_details_nav" href="../placeOrder/orderDetails.html">Orders Details</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -38,9 +41,6 @@
         <h2>Place Order</h2>
     </div>
     <div class="card">
-        <div class="card-header">
-            Home / Order
-        </div>
         <div class="card-body">
             <div class="grid-container">
                 <!-- Invoice Details div-->
@@ -223,10 +223,14 @@
                 <p>Discount Amount : <span id="discountAmountSpan"></span></p>
             </div>
             <div class="modal-footer">
-                <img src="../assets/images/posware_logo.png" alt="Bootstrap" width="150" height="24">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Add Item</button>
             </div>
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

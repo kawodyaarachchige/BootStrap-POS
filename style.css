@@ -51,17 +51,25 @@ header {
     }
 }
 
-/* Navbar styles */
 .navbar {
-    color: green;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--primary);
+    padding: 10px 20px; /* Adjust padding */
+    height: 80px; /* Adjust height */
+}
+
+.navbar-brand img {
+    width: 150px; /* Adjust logo size */
+    height: 150px; /* Adjust logo size */
 }
 
 .navbar-nav .nav-link {
     color: var(--font-color);
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--accent-color);
+    padding: 10px; /* Adjust padding */
+    margin-right: 10px; /* Adjust spacing between links */
 }
 
 #main-section {

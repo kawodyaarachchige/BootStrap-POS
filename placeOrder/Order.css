@@ -65,12 +65,25 @@ body {
     }
 }
 table{
-    margin-top: 30px;
+    margin-top: 30px;}
 
-}.navbar-nav .nav-link {
-     color: var(--font-color);
- }
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--primary);
+        padding: 10px 20px; /* Adjust padding */
+        height: 80px; /* Adjust height */
+    }
 
-.navbar-nav .nav-link:hover {
-    color: var(--accent-color);
-}
+    .navbar-brand img {
+        width: 150px; /* Adjust logo size */
+        height: 150px; /* Adjust logo size */
+    }
+
+    .navbar-nav .nav-link {
+        color: var(--font-color);
+        padding: 10px; /* Adjust padding */
+        margin-right: 10px; /* Adjust spacing between links */
+    }
