@@ -1,35 +1,98 @@
-body{
-    background:linear-gradient(45deg, #d4dfe8, #c5e3d5) ;
-}
-.nav{
-        margin-top: 1rem;
-        width: 95%;
-        position: fixed;
-        margin-left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+body {
+    font-family: Arial, sans-serif;
+    background:linear-gradient(45deg, #d4dfe8, #c5e3d5) ;/* Light gray background */
+    color: #212529; /* Dark gray text color */
+    margin: 0;
+    padding: 0;
 }
 
-#main-section{
+#main-section {
+    padding: 50px 0;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    color: #007bff;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+header {
+    background: linear-gradient(45deg, #d4dfe8, #c5e3d5);
+    animation: gradientAnimation 10s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(45deg, #d4dfe8, #c5e3d5);
+    }
+    50% {
+        background: linear-gradient(45deg, #c5e3d5, #d4dfe8);
+    }
+    100% {
+        background: linear-gradient(45deg, #d4dfe8, #c5e3d5);
+    }
+}
+
+/* Navbar styles */
+.navbar {
+    color: green;
+}
+
+.navbar-nav .nav-link {
+    color: var(--font-color);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color);
+}
+
+#main-section {
     padding: 70px;
 }
-.grid-container{
+
+.grid-container {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 10px;
     width: 100%;
-    padding:0 20px;
-
+    padding: 0 20px;
 }
-.grid-container>div{
-    width: 100px;
-    aspect-ratio: 1/0.5;
+
+.grid-container > div {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffffff;
+}
+
+.grid-container > div:hover {
+    box-shadow: 0 0 10px grey; /* Increased shadow on hover */
     background-color: #dfe6e9;
 }
-.grid-container>div:hover{
-    box-shadow: grey 0 0 2px;
-    background-color: #b2bec3;
+.card-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #212529;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
 }
