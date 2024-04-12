@@ -158,41 +158,10 @@ body{
 }
 
 
-/* Media Queries for Responsive Design */
-
-/* For tablets and larger devices */
-@media (min-width: 768px) {
-    .container {
-        width: 80%;
-    }
-}
-
-/* For smaller devices like phones */
-@media (max-width: 576px) {
-    .container {
-        width: 90%;
-    }
-
-    #formInfo {
-        flex-direction: column;
-    }
-
-    #formInfo > h2 {
-        margin-left: 0;
-    }
-
-    #formInfo > img {
-        margin-left: 0;
-        margin-top: 5px;
-    }
-
-    .searchItemCard {
-        width: 100%;
-    }
-
-    #saveViewBtns {
-        top: 0;
+@media (max-width: 1000px) {
+    .btn-group.saveViewBtns {
         left: 0;
-        margin: 10px;
+        top: 0;
+        margin-bottom: 10px;
     }
 }
