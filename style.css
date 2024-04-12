@@ -1,13 +1,35 @@
 body{
     background:linear-gradient(45deg, #d4dfe8, #c5e3d5) ;
 }
-
-    .navbar{
+.nav{
         margin-top: 1rem;
         width: 95%;
+        position: fixed;
         margin-left: 50%;
         transform: translateX(-50%);
         background-color: white;
         border-radius: 15px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#main-section{
+    padding: 70px;
+}
+.grid-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 10px;
+    width: 100%;
+    padding:0 20px;
+
+}
+.grid-container>div{
+    width: 100px;
+    aspect-ratio: 1/0.5;
+    background-color: #dfe6e9;
+}
+.grid-container>div:hover{
+    box-shadow: grey 0 0 2px;
+    background-color: #b2bec3;
 }
