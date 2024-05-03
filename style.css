@@ -24,7 +24,7 @@ body {
 }
 
 .navbar-brand img {
-    width: 120px;
+    width: 130px;
     height: 35px;
 }
 .navbar-nav .nav-link {
@@ -107,7 +107,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /*margin-top: 70px;*/
     margin-bottom: 10px;
-    height: 600px;
+
 }
 
 #customer_btn button {
