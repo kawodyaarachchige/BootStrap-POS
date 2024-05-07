@@ -66,6 +66,54 @@
         </div>
     </div>
 </section>
+<!--<section id="bar" class="container section-container-custom">
+    <div class="row">
+        &lt;!&ndash; Card 1: Revenue Bar Chart &ndash;&gt;
+        <div class="col-lg-4 ">
+            <div class="card card-custom">
+                <div class="card-header">
+                    Revenue
+                    <i class="fa-solid fa-hand-holding-dollar card-icon"></i>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        &lt;!&ndash; Card 2: Expenses Bar Chart &ndash;&gt;
+        <div class="col-lg-4 ">
+            <div class="card card-custom">
+                <div class="card-header">
+                    Expenses
+                    <i class="fa-solid fa-dollar-sign card-icon"></i>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="expensesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        &lt;!&ndash; Card 3: Sales Line Chart &ndash;&gt;
+        <div class="col-lg-4 ">
+            <div class="card card-custom">
+                <div class="card-header">
+                    Sales
+                    <i class="fa-solid fa-chart-simple card-icon"></i>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="salesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
 <!--Customer Manage Section-->
 <section id="customer">
     <div class="container">
@@ -96,16 +144,16 @@
                             <input type="text" class="form-control" id="contact">
                         </div>
                         <div id="customer_btn" class="mt-5">
-                            <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-success" id="save-btn" data-bs-toggle="modal"
                                     data-bs-target="#save-user-modal">Save
                             </button>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-primary" id="update-btn" data-bs-toggle="modal"
                                     data-bs-target="#update-user-modal">Update
                             </button>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-danger" id="delete-btn" data-bs-toggle="modal"
                                     data-bs-target="#delete-user-modal">Delete
                             </button>
-                            <button type="reset" class="btn btn-warning">Clear</button>
+                            <button type="reset" class="btn btn-warning" id="clear-btn">Clear</button>
                         </div>
                     </form>
                 </div>
@@ -129,19 +177,7 @@
                             <th scope="col">Branch</th>
                         </tr>
                         </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Anton</td>
-                            <td>3A/1,Landon</td>
-                            <td>USA</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>John</td>
-                            <td>45,Galle Road</td>
-                            <td> Hikkaduwa</td>
-                        </tr>
+                        <tbody id="customer-tbody">
                         </tbody>
                     </table>
                 </div>
@@ -369,7 +405,7 @@
 <!--Order Details Section-->
 <section id="order-details-section">
     <div class="container">
-        <h3 class="header">Manage Customer</h3>
+        <h3 class="header">View Order Details </h3>
         <div class="row mb-5">
             <div class="col">
             </div>
@@ -441,7 +477,57 @@
 
 <!--Modals-->
 <!--modal for save customer-->
+
+<!--modal for save customer-->
 <div class="modal" tabindex="-1" id="save-user-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add New Customer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="card saveModalCard">
+                <div class="card-header">
+                    customer manage / save
+                </div>
+                <form>
+                    <div class="card-body save-user-card">
+                        <div class="mb-3 user-id">
+                            <label for="saveUserIdField" class="form-label">User ID</label>
+                            <input class="form-control" type="text" placeholder="User Id" id="saveUserIdField">
+                        </div>
+                        <div class="mb-3 user-name">
+                            <label for="saveUserNameField" class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="saveUserNameField" placeholder="kusal Gunasekara">
+                        </div>
+                        <div class="mb-3 user-Email">
+                            <label for="saveUserEmailField" class="form-label">Email Address</label>
+                            <input type="text" class="form-control" id="saveUserEmailField" placeholder="1234@1234.com">
+                        </div>
+                        <div class="mb-3 user-address">
+                            <label for="saveUserAddressField" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="saveUserAddressField" placeholder="3A/1,Kandy">
+                        </div>
+                        <div class="mb-3 user-branch">
+                            <label for="saveUserBranchField" class="form-label">User Branch</label>
+                            <select class="form-select user-branch" id="saveUserBranchField" aria-label="Default select example">
+                                <option selected value="0">Branches</option>
+                                <option value="1">Colombo Main</option>
+                                <option value="2">Kandy</option>
+                                <option value="3">Matara</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btnSaveCustomer">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="modal" tabindex="-1" id="save-user-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -484,7 +570,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 <!--modal for update customer-->
 <div class="modal" tabindex="-1" id="update-user-modal">
     <div class="modal-dialog">

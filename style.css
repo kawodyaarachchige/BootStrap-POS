@@ -312,3 +312,18 @@ th[scope = 'col']:last-child{
     width: 80%;
     height: auto;
 }
+/*
+.chart-container {
+    position: relative;
+    height: 200px; !* Set a height for the chart container *!
+    margin-top: 20px;
+    background-color: #c5e3d5;
+}
+.card-custom{
+    width: 20vw;
+    background-color: #EAE8E8;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    margin: 2vw;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+
+}*/

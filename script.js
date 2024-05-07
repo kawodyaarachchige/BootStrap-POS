@@ -19,6 +19,10 @@ $('#place-order-section').css({
 $('#order-details-section').css({
     display:'none'
 })
+$(`#bar`).css({
+    display:'none'
+
+})
 $(document).ready(function() {
     const lastActiveSection = getLastActiveSection();
     if (lastActiveSection) {
@@ -30,6 +34,7 @@ $(document).ready(function() {
 $('#nav-home').on('click', ()=>{
     $('#main-section').css({
         display:'block'
+
     })
     $('#item-section ,#customer , #place-order-section, #order-details-section').css({
         display:'none'
