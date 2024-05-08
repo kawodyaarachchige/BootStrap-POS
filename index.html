@@ -118,9 +118,9 @@
 <section id="customer">
     <div class="container">
         <div class="row mb-3">
-            <div  class="col formInfo">
+            <div class="col formInfo">
                 <h3 class="header">Manage Customer</h3>
-<!--                <img src="assets/icons/icons8-customers-48.png" alt="Bootstrap" width="50" height="50">-->
+                <!--                <img src="assets/icons/icons8-customers-48.png" alt="Bootstrap" width="50" height="50">-->
             </div>
         </div>
         <div class="order_container">
@@ -146,21 +146,23 @@
                         <div id="customer_btn" class="mt-5">
                             <button type="button" class="btn btn-success" id="btnSaveCustomer">Save</button>
                             <button type="button" class="btn btn-primary" id="btnUpdateCustomer">Update</button>
-                            <button type="button" class="btn btn-danger"  data-bs-toggle="modal"  data-bs-target="#delete-user-modal">Delete</button>
-                            <button type="reset" class="btn btn-warning">Clear</button>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#delete-user-modal">Delete
+                            </button>
+                            <button type="reset" class="btn btn-warning" id="btnClearCustomer">Clear</button>
+
                         </div>
                     </form>
                 </div>
                 <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
                     <div id="customer_search" class="search mb-4 mt-4 d-flex flex-row align-items-end">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="search" class="form-control" placeholder="Search">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>customer_id</option>
-                            <option>name</option>
-                            <option>address</option>
-                            <option>salary</option>
+                        <input id="searchCustomerReference" type="search" class="form-control" placeholder="Search">
+                        <select id="cmbSearchByCustomer" class="form-select" aria-label="Default select example">
+                            <option selected value="1">customer name(default)</option>
+                            <option value="2">id</option>
                         </select>
+                        <button type="button" class="btn btn-secondary" id="btnSearchCustomer">Search</button>
                     </div>
                     <table class="table table-bordered table-hover">
                         <thead>
@@ -484,7 +486,9 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelDeleteCustomer">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelDeleteCustomer">
+                    Close
+                </button>
                 <button type="button" class="btn btn-danger" id="btnConfirmDeleteCustomer">Delete</button>
             </div>
         </div>
