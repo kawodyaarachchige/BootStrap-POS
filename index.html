@@ -146,7 +146,7 @@
                         <div id="customer_btn" class="mt-5">
                             <button type="button" class="btn btn-success" id="btnSaveCustomer">Save</button>
                             <button type="button" class="btn btn-primary" id="btnUpdateCustomer">Update</button>
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"  data-bs-target="#delete-user-modal">Delete</button>
+                            <button type="button" class="btn btn-danger"  data-bs-toggle="modal"  data-bs-target="#delete-user-modal">Delete</button>
                             <button type="reset" class="btn btn-warning">Clear</button>
                         </div>
                     </form>
@@ -164,7 +164,7 @@
                     </div>
                     <table class="table table-bordered table-hover">
                         <thead>
-                        <tr class="table-info">
+                        <tr class="table-success">
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Address</th>
@@ -470,6 +470,7 @@
 </section>
 
 <!--Modals-->
+
 <!--modal for delete customer-->
 <div class="modal" tabindex="-1" id="delete-user-modal">
     <div class="modal-dialog">
@@ -479,15 +480,12 @@
             </div>
             <div class="modal-body">
                 <div class="mb-3 user-id">
-                    <label for="deleteUserIdField" class="form-label">User ID</label>
-                    <input class="form-control" type="text" value="User Id" id="deleteUserIdField"
-                           aria-label="readonly input example" readonly><br>
                     <p>Warning: Deleting this customer will result in data loss.</p>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="cancelDeleteCustomer">Close</button>
+                <button type="button" class="btn btn-danger" id="btnConfirmDeleteCustomer">Delete</button>
             </div>
         </div>
     </div>
