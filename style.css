@@ -327,3 +327,18 @@ th[scope = 'col']:last-child{
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 }*/
+.container{
+    position: absolute;
+
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    width: 70%;
+    height: 80%;
+}
+#btnUpdateItem ,#btnDeleteItem{
+    visibility: hidden;
+}

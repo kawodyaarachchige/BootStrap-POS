@@ -1,8 +1,8 @@
 import CustomerModel from "../model/customerModel.js";
-import {customers} from "../db/db.js";
+import {customers,searchedCustomersArr} from "../db/db.js";
 
 let selectedIndex;
-let searchedCustomersArr=[];
+
 
 
 function loadTable() {
