@@ -12,13 +12,13 @@ https://www.figma.com/file/QlMSUHi6GJffucT8OtnmNh/POS?type=design&node-id=0%3A1&
 ## Wire Frame
 ![App Screenshot](https://imgur.com/3Kosb0J.png)
 
-![App Screenshot](https://imgur.com/MdIF0Op.png)
+![App Screenshot](https://imgur.com/YfQpf9v.png)
 
-![App Screenshot](https://imgur.com/uBLtqml.png)
+![App Screenshot](https://imgur.com/ZCPtgGu.png)
 
-![App Screenshot](https://imgur.com/dR8uK8s.png)
+![App Screenshot](https://imgur.com/1b34H3o.png)
 
-![App Screenshot](https://imgur.com/brXt2dw.png)
+![App Screenshot](https://imgur.com/dWCzo3p.png)
 
 
 
