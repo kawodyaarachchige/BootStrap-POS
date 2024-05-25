@@ -1,84 +1,76 @@
-function setLastActiveSection(sectionId) {
-    localStorage.setItem('lastActiveSection', sectionId);
-}
-function getLastActiveSection() {
-    return localStorage.getItem('lastActiveSection');
-}
-$('#main-section').css({
-    display:'none'
-})
-$('#item-section').css({
-    display:'none'
-})
-$('#customer').css({
-    display:'none'
-})
-$('#place-order-section').css({
-    display:'none'
-})
-$('#order-details-section').css({
-    display:'none'
-})
-$(`#bar`).css({
-    display:'none'
+// navigation
 
-})
-$(document).ready(function() {
-    const lastActiveSection = getLastActiveSection();
-    if (lastActiveSection) {
-        $(`#${lastActiveSection}`).css({
-            display:'block'
-        })
+$('#customer').css('display','none');
+$('#item').css('display','none');
+$('#order').css('display','none');
+$('#order_details').css('display','none');
 
-    }});
-$('#nav-home').on('click', ()=>{
-    $('#main-section').css({
-        display:'block'
+$('#home_nav').on('click', () => {
+    $('#home').css('display', 'block');
+    $('#customer').css('display', 'none');
+    $('#item').css('display', 'none');
+    $('#order').css('display', 'none');
+    $('#order_details').css('display','none');
 
-    })
-    $('#item-section ,#customer , #place-order-section, #order-details-section').css({
-        display:'none'
-    })
-    console.log('Main-Page')
-    setLastActiveSection('main-section');
+    $('#home_nav').addClass('active-page');
+    $('#customer_nav').removeClass('active-page');
+    $('#item_nav').removeClass('active-page');
+    $('#order_nav').removeClass('active-page');
+    $('#order_details_nav').removeClass('active-page');
 });
-$('#nav-customer').on('click', ()=>{
-    $('#customer').css({
-        display:'block'
-    })
-    $('#item-section ,#main-section , #place-order-section, #order-details-section').css({
-        display:'none'
-    })
-    console.log('Customer-Page')
-    setLastActiveSection('customer');
+
+$('#customer_nav, #customer_link').on('click', () => {
+    $('#home').css('display', 'none');
+    $('#customer').css('display', 'block');
+    $('#item').css('display', 'none');
+    $('#order').css('display', 'none');
+    $('#order_details').css('display','none');
+
+    $('#home_nav').removeClass('active-page');
+    $('#customer_nav').addClass('active-page');
+    $('#item_nav').removeClass('active-page');
+    $('#order_nav').removeClass('active-page');
+    $('#order_details_nav').removeClass('active-page');
 });
-$('#nav-item').on('click', ()=>{
-    $('#item-section').css({
-        display:'block'
-    })
-    $('#customer ,#main-section, #place-order-section, #order-details-section').css({
-        display:'none'
-    })
-    console.log('Item-Page')
-    setLastActiveSection('item-section');
+
+$('#item_nav, #item_link').on('click', () => {
+    $('#home').css('display', 'none');
+    $('#customer').css('display', 'none');
+    $('#item').css('display', 'block');
+    $('#order').css('display', 'none');
+    $('#order_details').css('display','none');
+
+    $('#home_nav').removeClass('active-page');
+    $('#customer_nav').removeClass('active-page');
+    $('#item_nav').addClass('active-page');
+    $('#order_nav').removeClass('active-page');
+    $('#order_details_nav').removeClass('active-page');
 });
-$('#nav-order').on('click', ()=> {
-    $('#place-order-section').css({
-        display: 'block'
-    })
-    $('#item-section ,#customer , #main-section, #order-details-section').css({
-        display: 'none'
-    })
-    console.log('Order-Page')
-    setLastActiveSection('place-order-section');
+
+$('#order_nav, #order_link').on('click', () => {
+    $('#home').css('display', 'none');
+    $('#customer').css('display', 'none');
+    $('#item').css('display', 'none');
+    $('#order').css('display', 'block');
+    $('#order_details').css('display','none');
+
+    $('#home_nav').removeClass('active-page');
+    $('#customer_nav').removeClass('active-page');
+    $('#item_nav').removeClass('active-page');
+    $('#order_nav').addClass('active-page');
+    $('#order_details_nav').removeClass('active-page');
 });
-$('#nav-order-details').on('click', ()=>{
-    $('#order-details-section').css({
-        display:'block'
-    })
-    $('#item-section ,#customer, #main-section , #place-order-section').css({
-        display:'none'
-    })
-    console.log('Order-Details-Page')
-    setLastActiveSection('order-details-section');
-})
+
+$('#order_details_nav').on('click', () => {
+    $('#home').css('display', 'none');
+    $('#customer').css('display', 'none');
+    $('#item').css('display', 'none');
+    $('#order').css('display', 'none');
+    $('#order_details').css('display','block');
+
+    $('#home_nav').removeClass('active-page');
+    $('#customer_nav').removeClass('active-page');
+    $('#item_nav').removeClass('active-page');
+    $('#order_nav').removeClass('active-page');
+    $('#order_details_nav').addClass('active-page');
+});
