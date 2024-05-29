@@ -81,6 +81,8 @@ date.val(formattedDate);
 //add to cart part
 cart_btn.on('click', () => {
     let itemId = item_Id.val();
+    let wannaSelectIndex=parseInt(itemId);
+    let selectedItemId = items[wannaSelectIndex-1].itemCode;
     let orderQTY = parseInt(order_qty.val());
     let unitPrice = unit_price.val();
     let qty = qty_on_hand.val();
@@ -91,7 +93,7 @@ cart_btn.on('click', () => {
             let cartItemIndex = cart.findIndex(cartItem => cartItem.itemId === itemId);
             if (cartItemIndex < 0) {
                 let cart_item = {
-                    itemId: itemId,
+                    itemId: selectedItemId,
                     unitPrice: unitPrice,
                     qty: orderQTY,
                     total: total
@@ -218,6 +220,7 @@ order_btn.on('click', () => {
                                         balance.val('');
                                         net_total.text('0/=');
                                         sub_total.text('0/=');
+                                        console.log(orders);
 
 
                                       swal.fire({icon:'success',title:'Order placed successfully',});

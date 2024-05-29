@@ -1,12 +1,6 @@
 import {customers, orders, orderDetails, items} from "../db/db.js";
 
 
-const order_search = $('#order_search');
-const order_id = $('#order_detail_id');
-const customer_id = $('#order_detail_customer_id');
-const date = $('#order_details_date');
-const discount = $('#order_details_discount');
-const order_search_option = $('#order_detail_search select');
 
 
 var index = 0;
@@ -85,16 +79,21 @@ function loadDetailTable(o_id) {
     orderDetails.map((orderDetail, index) => {
         if (o_id == orderDetail.orderId) {
             var i_id = orderDetail.itemId;
+            var desc = "";
             var qty = orderDetail.qty;
             var price = orderDetail.unitPrice;
             var total = orderDetail.total;
-            var desc = "";
+
 
             items.map((item, index) => {
                 if (i_id == item.itemCode) {
                     var select_index = index;
-                    desc = item.description;
+                    desc=items[index].description;
+                    console.log("item :")
+                    console.log("Desc  :"+desc)
 
+
+                    /*desc = item.description;*/
                 }
             })
 
